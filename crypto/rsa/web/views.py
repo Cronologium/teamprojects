@@ -122,8 +122,8 @@ def decrypt(request):
     return JsonResponse({'msg': text})
 
 def generate_keys():
-    p = generateLargePrime(128)
-    q = generateLargePrime(128)
+    p = generateLargePrime(32)
+    q = generateLargePrime(32)
     n = p * q
     theta_n = (p - 1) * (q - 1)
 
