@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double radius;
+	double pi;
+	double circ;
+	double area;
+
+    pi = 3.14;
+    cin >> radius;
+    circ = 2 * pi * radius;
+    area = pi * radius * radius;
+    cout << circ;
+    cout << radius;
+	return 0;
+}

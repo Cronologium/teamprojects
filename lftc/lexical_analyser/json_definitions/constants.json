@@ -1,0 +1,39 @@
+{
+  "alphabet": "0123456789abcdefghijklmnopqrstuvwxyzABCDEF.X+-",
+  "states": [
+    {"label": "initial", "starting": true, "final": false, "transitions":
+      [
+        {"symbols": ["+1", "+2", "+3", "+4", "+5", "+6", "+7", "+8", "+9",
+                    "-1", "-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9"], "new_state": "decimal"},
+        {"symbols": ["+0.", "-0.", "0."], "new_state": "float"}
+      ]
+    },
+
+    {"label": "q0", "starting": true, "final": false, "transitions":
+      [
+        {"symbols": ["0"], "new_state": "omega"},
+        {"symbols": ["1", "2", "3", "4", "5", "6", "7", "8", "9"], "new_state": "decimal"}
+      ]
+    },
+
+    {"label": "decimal", "starting": false, "final": true, "transitions":
+      [
+        {"symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "new_state": "decimal"},
+        {"symbols": ["."], "new_state": "float"}
+      ]
+    },
+
+    {"label": "float", "starting": false, "final": false, "transitions":
+      [
+        {"symbols": ["1", "2", "3", "4", "5", "6", "7", "8", "9"], "new_state": "omega"},
+        {"symbols": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"], "new_state": "float"}
+      ]
+    },
+
+    {"label": "omega", "starting": false, "final": true, "transitions":
+      [
+
+      ]
+    }
+  ]
+}
