@@ -1,0 +1,10 @@
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\obj\Debug\TasksFilter.csprojResolveAssemblyReference.cache
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\obj\Debug\TasksFilter.Form1.resources
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\obj\Debug\TasksFilter.Properties.Resources.resources
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\obj\Debug\TasksFilter.csproj.GenerateResource.Cache
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\obj\Debug\TasksFilter.csproj.CoreCompileInputs.cache
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\bin\Debug\TasksFilter.exe.config
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\bin\Debug\TasksFilter.exe
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\bin\Debug\TasksFilter.pdb
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\obj\Debug\TasksFilter.exe
+C:\Users\Matukaa\Documents\Teamstuff\teamprojects\ppd\TasksFilter\TasksFilter\obj\Debug\TasksFilter.pdb
