@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour {
     public float carStartForce = 200f;
     public List<GameObject> spawnedCars = new List<GameObject>();
 
+    public List<GameObject> intersections = new List<GameObject>();
+
+    public int initCarsGenerated;
+    public int secondsUntilNextGen;
+    private int frames;
+
     // Use this for initialization
     void Awake()
     {
@@ -17,7 +23,8 @@ public class GameManager : MonoBehaviour {
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
-
+        frames = (int) (secondsUntilNextGen * 1 / Time.deltaTime);
+        initCarsGenerated -= 1;
         Setup();
     }
 
@@ -49,6 +56,17 @@ public class GameManager : MonoBehaviour {
     
     // Update is called once per frame
     void Update () {
-        
+        if (initCarsGenerated > 0)
+        {
+            if (frames == 0)
+            {
+                Setup();
+                initCarsGenerated--;
+                frames = secondsUntilNextGen * 60;
+            } else
+            {
+                frames--;
+            }
+        }
     }
 }
