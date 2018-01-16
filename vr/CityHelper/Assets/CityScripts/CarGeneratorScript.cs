@@ -20,7 +20,6 @@ public class CarGeneratorScript : MonoBehaviour {
     {
         Vector3 rotation = new Vector3();
         Vector3 startForce = GameManager.instance.GetForceVectorForDirection(direction);
-        Debug.Log(startForce);
         if (direction == "x+")
             rotation.y = 180f;
         if (direction == "z-")

@@ -127,7 +127,7 @@ public class GvrEditorEmulator : MonoBehaviour {
     if (MouseControllerProvider.IsActivateButtonPressed) {
       return false;
     }
-
+    return true;
     return Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt);
   }
 
