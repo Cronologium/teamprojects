@@ -1,3 +1,4 @@
+import re
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 
@@ -8,6 +9,9 @@ import random
 import math
 import sys
 
+
+plaintext_regex = r'^[a-z ]*$'
+ciphertext_regex = r'^[A-Z ]*$'
 
 def rabinMiller(n):
     s = n - 1
@@ -81,6 +85,9 @@ def gcd(a, b):
 
 def encrypt(request):
     text = request.POST['text']
+
+    if re.search(plaintext_regex, text) is None:
+        return JsonResponse({'msg': 'Plaintext is invalid!'})
     n = int(request.POST['n'])
     e = int(request.POST['e'])
 
@@ -104,7 +111,12 @@ def encrypt(request):
 
 
 def decrypt(request):
-    text = request.POST['text'].lower()
+    text = request.POST['text']
+
+    if re.search(ciphertext_regex, text) is None:
+        return JsonResponse({'msg': 'Invalid cipher text!'})
+
+    text = text.lower()
     d = int(request.POST['d'])
     n = int(request.POST['n'])
 
@@ -138,8 +150,8 @@ def xgcd(a, b):
 
 
 def generate_keys():
-    p = generateLargePrime(32)
-    q = generateLargePrime(32)
+    p = generateLargePrime(128)
+    q = generateLargePrime(128)
     n = p * q
     theta_n = (p - 1) * (q - 1)
 
